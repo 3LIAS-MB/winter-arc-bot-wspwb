@@ -1,10 +1,9 @@
-node_modules/
-node_modules
-/node_modules
-.env
+# Dependencias
 node_modules/
 
-# Crear .gitignore
-echo .wwebjs_auth/ >> .gitignore
-echo .wwebjs_cache/ >> .gitignore
-echo node_modules/ >> .gitignore
+# Variables de entorno
+.env
+
+# Archivos/carpeta de wwebjs
+.wwebjs_auth/
+.wwebjs_cache/

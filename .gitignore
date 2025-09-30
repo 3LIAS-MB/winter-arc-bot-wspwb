@@ -7,5 +7,3 @@ node_modules/
 # Archivos/carpeta de wwebjs
 .wwebjs_auth/
 .wwebjs_cache/
-.wwebjs_auth/sesision
-/.wwebjs_auth/sesions

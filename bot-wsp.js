@@ -2,19 +2,32 @@ const { Client, LocalAuth } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
 const schedule = require("node-schedule");
 
-// Inicializar el cliente de WhatsApp
+// Inicializar el cliente de WhatsApp con webVersionCache
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
     headless: true,
-    args: ["--no-sandbox"],
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--disable-gpu",
+    ],
+  },
+  webVersionCache: {
+    type: "remote",
+    remotePath:
+      "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html",
   },
 });
 
 // Configuración
 const CONFIG = {
-  groupName: "Winter Arc", // Nombre de tu grupo
-  sendTime: "8 0 * * *", // Cron: todos los días a las 8:00 AM (hora, minuto, día del mes, mes, día de la semana)
+  groupName: "WINTER ARC (yo)", // Nombre de tu grupo
+  sendTime: "0 8 * * *", // Cron: todos los días a las 8:00 AM (minuto, hora, día, mes, día semana)
 };
 
 // Array de frases motivadoras

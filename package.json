@@ -4,8 +4,8 @@
   "description": "Bot de WhatsApp para enviar mensajes motivadores automáticos",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
-    "dev": "nodemon bot.js"
+    "start": "node bot-wsp.js",
+    "dev": "nodemon bot-wsp.js"
   },
   "keywords": [
     "whatsapp",
@@ -15,9 +15,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "whatsapp-web.js": "^1.23.0",
+    "node-schedule": "^2.1.1",
     "qrcode-terminal": "^0.12.0",
-    "node-schedule": "^2.1.1"
+    "whatsapp-web.js": "^1.23.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
